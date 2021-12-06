@@ -1,1 +1,103 @@
-<mxfile host="app.diagrams.net" modified="2021-12-06T12:17:29.104Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15" etag="TySA4hoawIB-WrPjNNmS" version="15.9.1" type="github"><diagram id="bXCmVAhOqQxk-IfF_nTX" name="Page-1">7Zpfb6M4EMA/TR43AhsT8thku7d3aqvqctI9VgZMsAqYBWeT9tOfTSAB7G5TBSfs3qZSQ8YOwb/545mBCVymuz8KnMf3LCTJBFjhbgI/TwCYW0D8l4KXvcCB3l6wLmi4F9lHwYq+klpo1dINDUnZmcgZSzjNu8KAZRkJeEeGi4Jtu9MilnR/NcdroghWAU5U6b805PFe6iHrKP9K6Dpuftm26pEUN5NrQRnjkG1bIng7gcuCMb4/SndLkkh2DZf99768MXq4sIJk/JQv/P24/Ov5/u7pae08P8DHz/7T3cMnuD/Ld5xs6gXXF8tfGgIF22QhkSexJnCxjSknqxwHcnQrVC5kMU8T8ckWhyEthBYoy8Tnkm0kgkVEk2TJElZU54O+RSBxhbzkBXsmrRGLeJbniZH6okjBye7N1doHhsL2CEsJL17ElOYLsxp7bXduo5ftUYvAqWVxS4NOMxHXlrM+nPsIVxzUfD/A2vlVWTsuGhvr2cCse1xJ9dJxhS6cw9CMDc/dk7kawuqZxRoh+SflLONtqNVLh9utXmbM+Pq4bVfh/bh5fRWogfVnKneuPv13eOMy32+SEd1JHVWgv+CUJnLNS5bSQJxvhbNSvN2v6gn1rmwPFC6A1QvNnsrZ9jScD8LhQavxwsfB85nG/R7bIUKE12NpqyxdDUpgjORcIfkPTUkxfpQHN65RenONWVoaltAUS6BmDD4puVxVgl9IIVdfBqxQw8Do4CLQSxE0sdUGGriuMbhIgZvhlMhFT4CLUwkp88u8Wv//QsSFn/7AkuxxWJIz71rSDGksSRfyjO3SQN08blKcTMeiV5MimNJMyBLBeOGLIO+u5dHXTYhHcXmGRU61eqOxV/oKDXByk9C1LPQ4y834kQdO9KNDmB7ekYYuL0ZTISuV3NULZKDmaY0fS5tsPLmdaBSEHHxd/GZ72plO8OHiGtfeEAj+Ire8UK7dU6Kj23l0OYyxnafJPH89h1Fq8as7DLQHZn2VllKfq86GL9vjgLoWtBqI3ip8fsclgLz3+1YXjksntLrP7FRtCiqbCtYD2ZrJh6Cmia1rShnrSUG1QB09RNSDCKzZlSGqHdTRQ+xb4vUhnnA3ZWwQ+5Z4fXdWi5sgZqyUe1geM85+sFd9vPXS5dlu4qOB+PYaejZwT9t0jDX0oFrRHAFXaYNBwgMQBbBPVLON2xqixvrPjlpeyMZWu9/Toul+27Ama/tUVtZ2IyYAlO8qQM14t0lkMoy0zB6gVnaWkIibbK3Y826heCgc25qcazR5EA6vSrV6+TlucPULFlsTxy96g8sB72+GZYxzeYgDLkuE82J3twgJMfGiQFeEuIFH/Gig6G73UhBNLNJVicaCu3NCCtL48x32SfLISlo3MnzGOUvfdPiWIhq9pbu1fJht6uOSBtNSaIYIEItEnngh3GZduUmL/e2Nu6geQ9hPYUVICt3whzSNiBc6Ok17wIdDPfRwuGHcaNpGU6ToGiGNrqEpXZ/QBjam6012cUVHUQQCrUuHru8iQ4qGmicFdGpGxtSs60BfSM0xwQW/vKK9gOgV7XtIduIGit19RdvTmcalNeEbuY3vD65tpOaSv+83nP882lB9PfHx+CRyNdZ6nBve/gc=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-12-06T12:56:34.085Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15" etag="DF0BVq-ygtDWO74No7Tc" version="15.9.1" type="github">
+  <diagram id="bXCmVAhOqQxk-IfF_nTX" name="Page-1">
+    <mxGraphModel dx="1327" dy="970" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RPCJkML__g4kN3PDb_LN-3" value="" style="rounded=0;whiteSpace=wrap;html=1;direction=south;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
+          <mxGeometry x="170" y="600" width="240" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-4" value="" style="rounded=0;whiteSpace=wrap;html=1;direction=south;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
+          <mxGeometry x="465" y="600" width="240" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="170" y="960" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="465" y="960" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-16" value="Puzzle Image" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Comic Sans MS;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="200" y="680" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-17" value="back" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+          <mxGeometry x="180" y="610" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-19" value="Timer" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+          <mxGeometry x="240" y="890" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-24" value="best players score" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+          <mxGeometry x="525" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-25" value="names &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; time" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+          <mxGeometry x="495" y="750" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-27" value="Amal. &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;3min&lt;br&gt;Huda &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;4min" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="495" y="820" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-28" value="" style="rounded=0;whiteSpace=wrap;html=1;direction=south;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
+          <mxGeometry x="170" y="90" width="240" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-29" value="&lt;font&gt;players screen&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;align=center;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+          <mxGeometry x="170" y="450" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-30" value="" style="rounded=0;whiteSpace=wrap;html=1;direction=south;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
+          <mxGeometry x="465" y="90" width="240" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-31" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="465" y="450" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-33" value="&lt;font&gt;best players score screen&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;align=center;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+          <mxGeometry x="585" y="960" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-34" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="495" y="300" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-35" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="595" y="207" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-36" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="495" y="207" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-37" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="595" y="300" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-38" value="&lt;font style=&quot;font-size: 19px&quot; face=&quot;Comic Sans MS&quot;&gt;choose photo&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Courier New;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="525" y="126" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-39" value="&lt;font face=&quot;Comic Sans MS&quot; style=&quot;font-size: 15px&quot;&gt;choose player&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="235" y="120" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-40" value="Amal&lt;br style=&quot;font-size: 25px;&quot;&gt;Huda" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Courier New;fontSize=25;align=left;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="190" y="170" width="190" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-41" value="back" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+          <mxGeometry x="465" y="100" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-42" value="" style="shape=actor;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="515" y="220" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-47" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley;labelBackgroundColor=#EA6B66;labelBorderColor=#EA6B66;fontFamily=Courier New;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="610" y="215.5" width="55" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-48" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.sun;labelBackgroundColor=#EA6B66;labelBorderColor=#EA6B66;fontFamily=Courier New;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="610" y="310" width="55" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-49" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.heart;labelBackgroundColor=#EA6B66;labelBorderColor=#EA6B66;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="510" y="311.75" width="50" height="56.5" as="geometry" />
+        </mxCell>
+        <mxCell id="RPCJkML__g4kN3PDb_LN-50" value="&lt;font&gt;players screen&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;align=center;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+          <mxGeometry x="465" y="960" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dowZzyBqUfYYc4fk2vn_-1" value="&lt;font&gt;best players score screen&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;align=center;fontFamily=Comic Sans MS;" vertex="1" parent="1">
+          <mxGeometry x="290" y="450" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dowZzyBqUfYYc4fk2vn_-2" value="" style="shape=cross;whiteSpace=wrap;html=1;labelBackgroundColor=#EA6B66;labelBorderColor=#EA6B66;fontFamily=Comic Sans MS;fontSize=25;fontColor=none;" vertex="1" parent="1">
+          <mxGeometry x="370" y="100" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dowZzyBqUfYYc4fk2vn_-3" value="edit" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;labelBorderColor=none;fontFamily=Comic Sans MS;fontSize=11;fontColor=none;" vertex="1" parent="1">
+          <mxGeometry x="170" y="100" width="40" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
