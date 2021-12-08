@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2CD4D3A275F5B2C009FB2CA /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D39275F5B2C009FB2CA /* GameVC.swift */; };
 		C2F21DCE275E084B00805223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F21DCD275E084B00805223 /* AppDelegate.swift */; };
 		C2F21DD0275E084B00805223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F21DCF275E084B00805223 /* SceneDelegate.swift */; };
 		C2F21DD2275E084B00805223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F21DD1275E084B00805223 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2CD4D39275F5B2C009FB2CA /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		C2F21DCA275E084B00805223 /* Puzzles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F21DCD275E084B00805223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2F21DCF275E084B00805223 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2CD4D38275F5ADB009FB2CA /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				C2CD4D39275F5B2C009FB2CA /* GameVC.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		C2F21DC1275E084B00805223 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +71,7 @@
 				C2F21DCD275E084B00805223 /* AppDelegate.swift */,
 				C2F21DCF275E084B00805223 /* SceneDelegate.swift */,
 				C2F21DD1275E084B00805223 /* ViewController.swift */,
+				C2CD4D38275F5ADB009FB2CA /* Game */,
 				C2F21DD3275E084B00805223 /* Main.storyboard */,
 				C2F21DD9275E084D00805223 /* Assets.xcassets */,
 				C2F21DDB275E084D00805223 /* LaunchScreen.storyboard */,
@@ -144,6 +155,7 @@
 				C2F21DD2275E084B00805223 /* ViewController.swift in Sources */,
 				C2F21DD8275E084B00805223 /* Puzzles.xcdatamodeld in Sources */,
 				C2F21DCE275E084B00805223 /* AppDelegate.swift in Sources */,
+				C2CD4D3A275F5B2C009FB2CA /* GameVC.swift in Sources */,
 				C2F21DD0275E084B00805223 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
