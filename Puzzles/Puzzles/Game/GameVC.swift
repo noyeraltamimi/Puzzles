@@ -6,15 +6,19 @@
 //
 
 import UIKit
+import SpriteKit
+
+
 
 class GameVC: UIViewController {
-    var row:Int = 4
-    var col:Int = 3
+    var row:Int = 6
+    var col:Int = 4
     var count:Int = 0
     var timeauto:Timer!
     var width:CGFloat!
     var height:CGFloat!
     var imageView:[UIImageView] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +39,6 @@ class GameVC: UIViewController {
         }
         let move = width/CGFloat(col)
         var imageViewTam = imageView
-        
         while imageViewTam.count > 0 {
             let random = Int.random(in: 0...imageViewTam.count - 1)
             let image = imageViewTam[random]
@@ -76,7 +79,7 @@ class GameVC: UIViewController {
 
             }
             
-            
+            imageViewTam.remove(at: random)
             
         }
        
@@ -94,7 +97,7 @@ class GameVC: UIViewController {
         for i in 0...row - 1{
         for j in 0...col - 1{
             let cropImage = imageConvert!.cropping(to: CGRect(x: CGFloat(j)*sizeImage, y: CGFloat(i)*sizeImage, width: sizeImage, height: sizeImage))
-            let imageViews = UIImageView(image: UIImage(cgImage: cropImage!))
+            let imageView = UIImageView(image: UIImage(cgImage: cropImage!))
             imageView.layer.borderWidth = 0.5
             // The color for lines inside photo.
             imageView.layer.borderColor = UIColor.black.cgColor
@@ -104,17 +107,16 @@ class GameVC: UIViewController {
             count += 1
             imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapimage(gesture:))))
             imageView.isUserInteractionEnabled = true
-            imageView.append(imageView)
+            //imageView.append(imageView)
          }
         }
         imageView.last?.removeFromSuperview()
-        imageView.removeLast()
+        //imageView.removeLast()
     }
     
     @objc func tapimage(gesture: UITapGestureRecognizer){
-        
         let image = gesture.view as! UIImageView
-        let x = image.frame.origin
+        let x = image.frame.origin.x
         let y = image.frame.origin.y
         let move = width/CGFloat(col)
         print(image.tag)
@@ -123,21 +125,22 @@ class GameVC: UIViewController {
             UIView.animate(withDuration: 0.2) {
                 image.frame.origin.x -= move
             }
-return
+            return
+
         }
         
         if checkMove(pos: CGPoint(x: x + move, y: y)){
             UIView.animate(withDuration: 0.2) {
                 image.frame.origin.x += move
             }
+            
             return
-
         }
         
         
         if checkMove(pos: CGPoint(x: x, y: y + move)){
             UIView.animate(withDuration: 0.2) {
-                image.frame.origin.x -= move
+                image.frame.origin.x += move
             }
 
             return
@@ -157,8 +160,9 @@ return
     }
    
        func checkMove(pos:CGPoint) -> Bool{
-           let count:[UIImageView] = []
-           count = imageView.filter {$0.frame.origin.x - pos.x > -1 && $0.frame.origin.y - pos.y > -1 && $0.frame.origin.y - pos.y < 1 }
+           var count:[UIImageView] = []
+          //count = imageViews.filter {$0.frame.origin == pos}
+           count = imageView.filter {$0.frame.origin.x - pos.x > -1 && $0.frame.origin.x - pos.x > -1 && $0.frame.origin.y - pos.y < 1 }
            if count == [] && checkOut(pos: pos){
                return true
            }
@@ -166,7 +170,7 @@ return
         }
         
     func checkOut(pos:CGPoint) -> Bool{
-        let top:CGFloat = self.view.frame.height/2 - height/2 //- width/CGFloat(col)
+        let top:CGFloat = self.view.frame.height/2 - height/2 - 1
         let left:CGFloat = 0
         let right:CGFloat = width - width/CGFloat(col) + 1
         let bottom:CGFloat = self.view.frame.height/2 + height/2 - width/CGFloat(col) + 1
