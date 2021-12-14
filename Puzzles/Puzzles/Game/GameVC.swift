@@ -99,7 +99,6 @@ class GameVC: UIViewController {
             let cropImage = imageConvert!.cropping(to: CGRect(x: CGFloat(j)*sizeImage, y: CGFloat(i)*sizeImage, width: sizeImage, height: sizeImage))
             let imageView = UIImageView(image: UIImage(cgImage: cropImage!))
             imageView.layer.borderWidth = 0.5
-            // The color for lines inside photo.
             imageView.layer.borderColor = UIColor.black.cgColor
             imageView.frame.origin = CGPoint(x: CGFloat(j)*sizeImage, y: CGFloat(i)*sizeImage)
             view.addSubview(imageView)
