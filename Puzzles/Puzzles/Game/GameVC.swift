@@ -19,13 +19,77 @@ class GameVC: UIViewController {
     var height:CGFloat!
     var imageView:[UIImageView] = []
     
+    var timer:Timer = Timer()
+    var countTime:Int = 0
+    var timerCounting:Bool = false
+    
+    
+    
+    
+    @IBOutlet weak var TimerLabel: UILabel!
+    @IBOutlet weak var startStopButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         createPuzzle()
         repeatAutosort()
+        startStopButton.setTitleColor(UIColor.gray, for: .normal)
         
+    }
+    
+    @IBAction func resetTapped(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Reset Timer?", message: "Are you sure you would like to reset the Timer?", preferredStyle: .alert)
+        let actionCancel = UIAlertAction(title: "CANCEL", style: .cancel, handler: nil)
+        let actionOkay = UIAlertAction(title: "YES", style: .default, handler: { action in
+            self.countTime = 0
+            self.timer.invalidate()
+            self.TimerLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
+            self.startStopButton.setTitle("START", for: .normal)
+            self.startStopButton.setTitleColor(UIColor.green, for: .normal)
+        }
+        )
+        alert.addAction(actionOkay)
+        alert.addAction(actionCancel)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func startStopTapped(_ sender: Any) {
+        if(timerCounting) {
+            timerCounting = false
+            timer.invalidate()
+            startStopButton.setTitle("START", for: .normal)
+            startStopButton.setTitleColor(UIColor.gray, for: .normal)
+        } else {
+            timerCounting = true
+            startStopButton.setTitle("STOP", for: .normal)
+            startStopButton.setTitleColor(UIColor.red, for: .normal)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+        }
+    }
+    
+    @objc func timerCounter() -> Void {
+        count = count + 1
+        let time = secodsToHoursMinutesSeconds(seconds: count)
+        let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
+        TimerLabel.text = timeString
+    }
+    func secodsToHoursMinutesSeconds(seconds : Int) -> (Int, Int, Int) {
+        return ((seconds / 3600) , ((seconds % 3600) / 60 ) , ((seconds % 3600) % 60))
+    }
+    func makeTimeString(hours: Int , minutes: Int , seconds : Int) -> String {
+        var timeString = ""
+        timeString += String(format: "0%2d", hours)
+        timeString += " : "
+        timeString += String(format: "0%2d", minutes)
+        timeString += " : "
+        timeString += String(format: "0%2d", seconds)
+        return timeString
     }
     
     func repeatAutosort(){
@@ -37,18 +101,20 @@ class GameVC: UIViewController {
         if count >= 50{
             timeauto.invalidate()
         }
+        
         let move = width/CGFloat(col)
-        var imageViewTam = imageView
-        while imageViewTam.count > 0 {
-            let random = Int.random(in: 0...imageViewTam.count - 1)
-            let image = imageViewTam[random]
+        var imageViewsTam = imageView
+        while imageViewsTam.count > 0 {
+            let random = Int.random(in: 0...imageViewsTam.count - 1)
+            let image = imageViewsTam[random]
             let x: CGFloat = image.frame.origin.x
             let y: CGFloat = image.frame.origin.y
+            //  let image = imageViewsTam[random]
             if checkMove(pos: CGPoint(x: x - move, y: y)){
                 UIView.animate(withDuration: 0.2) {
                     image.frame.origin.x -= move
                 }
-    return
+                return
             }
             
             if checkMove(pos: CGPoint(x: x + move, y: y)){
@@ -56,19 +122,19 @@ class GameVC: UIViewController {
                     image.frame.origin.x += move
                 }
                 return
-
+                
             }
             
             
             if checkMove(pos: CGPoint(x: x, y: y + move)){
                 UIView.animate(withDuration: 0.2) {
-                    image.frame.origin.x -= move
+                    image.frame.origin.x += move
                 }
-
+                
                 return
-
+                
             }
-
+            
             
             if checkMove(pos: CGPoint(x: x, y: y + move)){
                 UIView.animate(withDuration: 0.2) {
@@ -76,41 +142,39 @@ class GameVC: UIViewController {
                 }
                 
                 return
-
+                
             }
             
-            imageViewTam.remove(at: random)
-            
+            imageViewsTam.remove(at: random)
         }
-       
-        }
+    }
     
-
+    
     func createPuzzle(){
         var count:Int = 0
-        let image = UIImage(named: "Image1")!.resizeImage(imagesize: self.view.frame.width, row: CGFloat(row), col: CGFloat(col))
+        let image = UIImage(named: "Image-1")!.resizeImage(imagesize: self.view.frame.width, row: CGFloat(row), col: CGFloat(col))
         width = image.size.width
         height = image.size.height
-        let y = self.view.frame.height/2 - height/2
+        // let y = self.view.frame.height/2 - height/2
         let imageConvert = image.cgImage
         let sizeImage = width/CGFloat(col)
         for i in 0...row - 1{
-        for j in 0...col - 1{
-            let cropImage = imageConvert!.cropping(to: CGRect(x: CGFloat(j)*sizeImage, y: CGFloat(i)*sizeImage, width: sizeImage, height: sizeImage))
-            let imageView = UIImageView(image: UIImage(cgImage: cropImage!))
-            imageView.layer.borderWidth = 0.5
-            imageView.layer.borderColor = UIColor.black.cgColor
-            imageView.frame.origin = CGPoint(x: CGFloat(j)*sizeImage, y: CGFloat(i)*sizeImage)
-            view.addSubview(imageView)
-            imageView.tag = count
-            count += 1
-            imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapimage(gesture:))))
-            imageView.isUserInteractionEnabled = true
-            //imageView.append(imageView)
-         }
+            for j in 0...col - 1{
+                let cropImage = imageConvert!.cropping(to: CGRect(x: CGFloat(j)*sizeImage, y: CGFloat(i)*sizeImage, width: sizeImage, height: sizeImage))
+                let imageView = UIImageView(image: UIImage(cgImage: cropImage!))
+                imageView.layer.borderWidth = 0.5
+                imageView.layer.borderColor = UIColor.black.cgColor
+                imageView.frame.origin = CGPoint(x: CGFloat(j)*sizeImage, y: CGFloat(i)*sizeImage)
+                view.addSubview(imageView)
+                imageView.tag = count
+                count += 1
+                imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapimage(gesture:))))
+                imageView.isUserInteractionEnabled = true
+                // imageView.append(imageView)
+            }
         }
         imageView.last?.removeFromSuperview()
-        //imageView.removeLast()
+        //   imageView.removeLast()
     }
     
     @objc func tapimage(gesture: UITapGestureRecognizer){
@@ -125,9 +189,7 @@ class GameVC: UIViewController {
                 image.frame.origin.x -= move
             }
             return
-
         }
-        
         if checkMove(pos: CGPoint(x: x + move, y: y)){
             UIView.animate(withDuration: 0.2) {
                 image.frame.origin.x += move
@@ -141,11 +203,11 @@ class GameVC: UIViewController {
             UIView.animate(withDuration: 0.2) {
                 image.frame.origin.x += move
             }
-
+            
             return
-
+            
         }
-
+        
         
         if checkMove(pos: CGPoint(x: x, y: y + move)){
             UIView.animate(withDuration: 0.2) {
@@ -153,21 +215,21 @@ class GameVC: UIViewController {
             }
             
             return
-
+            
         }
         
     }
-   
-       func checkMove(pos:CGPoint) -> Bool{
-           var count:[UIImageView] = []
-          //count = imageViews.filter {$0.frame.origin == pos}
-           count = imageView.filter {$0.frame.origin.x - pos.x > -1 && $0.frame.origin.x - pos.x > -1 && $0.frame.origin.y - pos.y < 1 }
-           if count == [] && checkOut(pos: pos){
-               return true
-           }
-           return false
+    
+    func checkMove(pos:CGPoint) -> Bool{
+        var count:[UIImageView] = []
+        //count = imageViews.filter {$0.frame.origin == pos}
+        count = imageView.filter {$0.frame.origin.x - pos.x > -1 && $0.frame.origin.x - pos.x > -1 && $0.frame.origin.y - pos.y < 1 }
+        if count == [] && checkOut(pos: pos){
+            return true
         }
-        
+        return false
+    }
+    
     func checkOut(pos:CGPoint) -> Bool{
         let top:CGFloat = self.view.frame.height/2 - height/2 - 1
         let left:CGFloat = 0
@@ -192,3 +254,5 @@ extension UIImage{
         return newImage!
     }
 }
+
+

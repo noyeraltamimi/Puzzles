@@ -10,10 +10,8 @@
 		C2CD4D3A275F5B2C009FB2CA /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D39275F5B2C009FB2CA /* GameVC.swift */; };
 		C2CD4D3D27621F82009FB2CA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D3C27621F82009FB2CA /* HomeVC.swift */; };
 		C2CD4D4127623FFF009FB2CA /* ChoosePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D4027623FFF009FB2CA /* ChoosePhoto.swift */; };
-		C2CD4D4327662840009FB2CA /* scoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D4227662840009FB2CA /* scoreScreen.swift */; };
 		C2CD4D4E276745E9009FB2CA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D4D276745E9009FB2CA /* CollectionViewCell.swift */; };
 		C2CD4D5227676FD6009FB2CA /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D5127676FD6009FB2CA /* ResultScreen.swift */; };
-		C2CD4D5427686DD3009FB2CA /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D5327686DD3009FB2CA /* GameTimer.swift */; };
 		C2CD4D5627686FD5009FB2CA /* leaderboardsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D5527686FD5009FB2CA /* leaderboardsScreen.swift */; };
 		C2CD4D59276874B2009FB2CA /* Player+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D57276874B2009FB2CA /* Player+CoreDataClass.swift */; };
 		C2CD4D5A276874B2009FB2CA /* Player+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D58276874B2009FB2CA /* Player+CoreDataProperties.swift */; };
@@ -30,10 +28,8 @@
 		C2CD4D39275F5B2C009FB2CA /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		C2CD4D3C27621F82009FB2CA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = ../../../HomeVC.swift; sourceTree = "<group>"; };
 		C2CD4D4027623FFF009FB2CA /* ChoosePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePhoto.swift; sourceTree = "<group>"; };
-		C2CD4D4227662840009FB2CA /* scoreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scoreScreen.swift; sourceTree = "<group>"; };
 		C2CD4D4D276745E9009FB2CA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C2CD4D5127676FD6009FB2CA /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
-		C2CD4D5327686DD3009FB2CA /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		C2CD4D5527686FD5009FB2CA /* leaderboardsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leaderboardsScreen.swift; sourceTree = "<group>"; };
 		C2CD4D57276874B2009FB2CA /* Player+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C2CD4D58276874B2009FB2CA /* Player+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -63,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				C2CD4D39275F5B2C009FB2CA /* GameVC.swift */,
-				C2CD4D5327686DD3009FB2CA /* GameTimer.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -83,14 +78,6 @@
 				C2CD4D58276874B2009FB2CA /* Player+CoreDataProperties.swift */,
 			);
 			path = Users;
-			sourceTree = "<group>";
-		};
-		C2CD4D4927671B1D009FB2CA /* Score */ = {
-			isa = PBXGroup;
-			children = (
-				C2CD4D4227662840009FB2CA /* scoreScreen.swift */,
-			);
-			path = Score;
 			sourceTree = "<group>";
 		};
 		C2CD4D4C276745A7009FB2CA /* Photos */ = {
@@ -128,7 +115,6 @@
 				C2CD4D5527686FD5009FB2CA /* leaderboardsScreen.swift */,
 				C2CD4D4C276745A7009FB2CA /* Photos */,
 				C2CD4D3B27621F24009FB2CA /* Home */,
-				C2CD4D4927671B1D009FB2CA /* Score */,
 				C2CD4D44276719B3009FB2CA /* Users */,
 				C2CD4D38275F5ADB009FB2CA /* Game */,
 				C2F21DD3275E084B00805223 /* Main.storyboard */,
@@ -215,10 +201,8 @@
 				C2F21DD8275E084B00805223 /* Puzzles.xcdatamodeld in Sources */,
 				C2CD4D4E276745E9009FB2CA /* CollectionViewCell.swift in Sources */,
 				C2CD4D5627686FD5009FB2CA /* leaderboardsScreen.swift in Sources */,
-				C2CD4D5427686DD3009FB2CA /* GameTimer.swift in Sources */,
 				C2F21DCE275E084B00805223 /* AppDelegate.swift in Sources */,
 				C2CD4D3D27621F82009FB2CA /* HomeVC.swift in Sources */,
-				C2CD4D4327662840009FB2CA /* scoreScreen.swift in Sources */,
 				C2CD4D3A275F5B2C009FB2CA /* GameVC.swift in Sources */,
 				C2F21DD0275E084B00805223 /* SceneDelegate.swift in Sources */,
 				C2CD4D5A276874B2009FB2CA /* Player+CoreDataProperties.swift in Sources */,

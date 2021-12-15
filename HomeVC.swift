@@ -79,7 +79,7 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
     @IBAction func AddButton(_ sender: Any) {
     
         
-            let alert = UIAlertController(title: "Add Friend", message: "", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Add Player", message: "", preferredStyle: .alert)
                 
     
         
@@ -96,7 +96,7 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
             
             let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             alert.addTextField { textFiledSet in
-                textFiledSet.placeholder = "Friend Name.."
+                textFiledSet.placeholder = "Player Name.."
                 
             }
         
