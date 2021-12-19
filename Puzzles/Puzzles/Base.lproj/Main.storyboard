@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aiH-R3-gEf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l7P-El-Dgm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -149,14 +149,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="SAf-EB-3Oc">
-                                <rect key="frame" x="115" y="726" width="184" height="86.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="SAf-EB-3Oc">
+                                <rect key="frame" x="50" y="644" width="314" height="106"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="DJN-oP-g6C">
-                                        <rect key="frame" x="0.0" y="0.0" width="184" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="103" translatesAutoresizingMaskIntoConstraints="NO" id="DJN-oP-g6C">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVG-fb-yFF">
-                                                <rect key="frame" x="0.0" y="0.0" width="67" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="105.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="STOP"/>
                                                 <connections>
@@ -164,7 +164,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehV-zX-4Fg">
-                                                <rect key="frame" x="117" y="0.0" width="67" height="31"/>
+                                                <rect key="frame" x="208.5" y="0.0" width="105.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="RESET"/>
                                                 <connections>
@@ -174,22 +174,20 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQf-Le-638">
-                                        <rect key="frame" x="0.0" y="66" width="184" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="76" width="314" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="DJN-oP-g6C" firstAttribute="centerX" secondItem="SAf-EB-3Oc" secondAttribute="centerX" id="u0i-0d-NNg"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1RZ-WR-5J4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SAf-EB-3Oc" firstAttribute="top" secondItem="1RZ-WR-5J4" secondAttribute="top" constant="682" id="C73-Et-65A"/>
-                            <constraint firstItem="SAf-EB-3Oc" firstAttribute="centerX" secondItem="6Nn-FG-ofJ" secondAttribute="centerX" id="rB1-ae-TQM"/>
+                            <constraint firstItem="1RZ-WR-5J4" firstAttribute="trailing" secondItem="SAf-EB-3Oc" secondAttribute="trailing" constant="50" id="3VM-R0-tkk"/>
+                            <constraint firstItem="1RZ-WR-5J4" firstAttribute="bottom" secondItem="SAf-EB-3Oc" secondAttribute="bottom" constant="112" id="ghs-Ad-VlW"/>
+                            <constraint firstItem="SAf-EB-3Oc" firstAttribute="leading" secondItem="1RZ-WR-5J4" secondAttribute="leading" constant="50" id="scK-6C-Ku6"/>
                         </constraints>
                     </view>
                     <connections>
