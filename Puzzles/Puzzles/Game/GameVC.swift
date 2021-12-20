@@ -10,8 +10,8 @@ import SpriteKit
 
 
 class GameVC: UIViewController {
-    var row:Int = 3
-    var col:Int = 3
+    var row:Int = 4
+    var col:Int = 4
     var count:Int = 0
     var timeauto:Timer!
     var width:CGFloat!

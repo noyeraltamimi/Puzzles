@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l7P-El-Dgm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aiH-R3-gEf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -149,24 +149,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="SAf-EB-3Oc">
-                                <rect key="frame" x="50" y="644" width="314" height="106"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="SAf-EB-3Oc">
+                                <rect key="frame" x="88.5" y="748.5" width="237" height="93.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="103" translatesAutoresizingMaskIntoConstraints="NO" id="DJN-oP-g6C">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="237" height="28.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVG-fb-yFF">
-                                                <rect key="frame" x="0.0" y="0.0" width="105.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="28.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="STOP"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="STOP">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="startStopTapped:" destination="aiH-R3-gEf" eventType="touchUpInside" id="YEy-UA-OTM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehV-zX-4Fg">
-                                                <rect key="frame" x="208.5" y="0.0" width="105.5" height="31"/>
+                                                <rect key="frame" x="170" y="0.0" width="67" height="28.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="RESET"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="RESET">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="resetTapped:" destination="aiH-R3-gEf" eventType="touchUpInside" id="yC7-aF-9eD"/>
                                                 </connections>
@@ -174,7 +178,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQf-Le-638">
-                                        <rect key="frame" x="0.0" y="76" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="63.5" width="237" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -185,9 +189,9 @@
                         <viewLayoutGuide key="safeArea" id="1RZ-WR-5J4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1RZ-WR-5J4" firstAttribute="trailing" secondItem="SAf-EB-3Oc" secondAttribute="trailing" constant="50" id="3VM-R0-tkk"/>
-                            <constraint firstItem="1RZ-WR-5J4" firstAttribute="bottom" secondItem="SAf-EB-3Oc" secondAttribute="bottom" constant="112" id="ghs-Ad-VlW"/>
-                            <constraint firstItem="SAf-EB-3Oc" firstAttribute="leading" secondItem="1RZ-WR-5J4" secondAttribute="leading" constant="50" id="scK-6C-Ku6"/>
+                            <constraint firstItem="1RZ-WR-5J4" firstAttribute="bottom" secondItem="SAf-EB-3Oc" secondAttribute="bottom" constant="20" id="99N-z1-Zqf"/>
+                            <constraint firstItem="SAf-EB-3Oc" firstAttribute="leading" secondItem="1RZ-WR-5J4" secondAttribute="leading" constant="88.5" id="VPd-hB-suf"/>
+                            <constraint firstItem="1RZ-WR-5J4" firstAttribute="trailing" secondItem="SAf-EB-3Oc" secondAttribute="trailing" constant="88.5" id="xZc-h6-rGv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -203,7 +207,7 @@
         <!--Result Screen-->
         <scene sceneID="B0Z-NC-owJ">
             <objects>
-                <viewController id="HOG-q6-5iG" customClass="ResultScreen" customModule="Puzzles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="HOG-q6-5iG" customClass="ResultScreen" customModule="Puzzles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Yn-4e-tAk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,6 +239,7 @@
                             <constraint firstItem="a4B-Qc-Zbd" firstAttribute="centerX" secondItem="6Yn-4e-tAk" secondAttribute="centerX" id="nV5-l5-LJh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vys-Nr-4Wj"/>
                     <connections>
                         <outlet property="scoreLabel" destination="a4B-Qc-Zbd" id="xFP-wR-sbN"/>
                     </connections>
