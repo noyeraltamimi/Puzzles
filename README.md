@@ -2,7 +2,7 @@
 
 
 Description:
-My Project is about Puzzles I build This app to be competitive game but it is have to many Benefits, This Game Exercise Both Sides of Your Brain , They Improve Your Memory , They Improve Your Problem-Solving Skills , They Enhance Your Mood , They Lower Your Stress Levels , They can Improve Your IQ Score and it is a great family activity or solo pastime . 
+My Project is about Puzzles I build This app to be competitive game Also it is have to many Benefits, This Game Exercise Both Sides of Your Brain , They Improve Your Memory , They Improve Your Problem-Solving Skills , They Enhance Your Mood , They Lower Your Stress Levels , They can Improve Your IQ Score and it is a great family activity or solo pastime . 
 
 
 

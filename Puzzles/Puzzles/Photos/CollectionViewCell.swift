@@ -10,6 +10,17 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var animalPhoto: UIImageView!
+    
+    
+    @IBOutlet weak var artPhoto: UIImageView!
+    
+    
+    @IBOutlet weak var carsPhoto: UIImageView!
+    
+    
+    @IBOutlet weak var fruitsPhoto: UIImageView!
+    
     
     
 }

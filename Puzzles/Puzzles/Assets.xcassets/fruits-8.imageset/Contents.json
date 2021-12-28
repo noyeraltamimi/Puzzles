@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Cherries are a medicinal powerhouse fruit that are packed with vitamins A, C, E, and minerals such as iron, copper, zinc, potassium, and manganese_.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

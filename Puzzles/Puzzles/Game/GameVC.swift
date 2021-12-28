@@ -10,24 +10,22 @@ import SpriteKit
 
 
 class GameVC: UIViewController {
-    var row:Int = 4
-    var col:Int = 4
+    var row:Int = 3
+    var col:Int = 3
     var count:Int = 0
     var timeauto:Timer!
     var width:CGFloat!
     var height:CGFloat!
     var imageViews:[UIImageView] = []
-    
+     
+    //for Timer
     var timer:Timer = Timer()
     var countTime:Int = 0
     var timerCounting:Bool = false
     
     
-    
-    
     @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
-    @IBOutlet weak var resetButton: UIButton!
     
     
     
@@ -36,70 +34,54 @@ class GameVC: UIViewController {
         // Do any additional setup after loading the view.
         createPuzzle()
         repeatAutosort()
-        startStopButton.setTitleColor(UIColor.gray, for: .normal)
+        startStopButton.setTitleColor(UIColor.green, for: .normal)
         
-        //view.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        view.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         
     }
     
-    @IBAction func resetTapped(_ sender: Any) {
-        
-        let alert = UIAlertController(title: "Reset Timer?", message: "Are you sure you would like to reset the Timer?", preferredStyle: .alert)
-        let actionCancel = UIAlertAction(title: "CANCEL", style: .cancel, handler: nil)
-        let actionOkay = UIAlertAction(title: "YES", style: .default, handler: { action in
-            self.countTime = 0
-            self.timer.invalidate()
-            self.TimerLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
-            self.startStopButton.setTitle("START", for: .normal)
-            self.startStopButton.setTitleColor(UIColor.green, for: .normal)
-        }
-        )
-        alert.addAction(actionOkay)
-        alert.addAction(actionCancel)
-        self.present(alert, animated: true, completion: nil)
-    }
-    
+
     
     @IBAction func startStopTapped(_ sender: Any) {
         if(timerCounting) {
             timerCounting = false
             timer.invalidate()
             startStopButton.setTitle("START", for: .normal)
-            startStopButton.setTitleColor(UIColor.gray, for: .normal)
+            startStopButton.setTitleColor(UIColor.green, for: .normal)
         } else {
             timerCounting = true
             startStopButton.setTitle("STOP", for: .normal)
             startStopButton.setTitleColor(UIColor.red, for: .normal)
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1 , target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
         }
     }
     
     @objc func timerCounter() -> Void {
-        count = count + 1
-        let time = secodsToHoursMinutesSeconds(seconds: count)
+        countTime = countTime + 1
+        let time = secodsToHoursMinutesSeconds(seconds: countTime)
         let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
         TimerLabel.text = timeString
     }
     func secodsToHoursMinutesSeconds(seconds : Int) -> (Int, Int, Int) {
-        return ((seconds / 3600) , ((seconds % 3600) / 60 ) , ((seconds % 3600) % 60))
+        return ((seconds / 3600) , ((seconds % 3600) / 60) , ((seconds % 3600) % 60))
     }
     func makeTimeString(hours: Int , minutes: Int , seconds : Int) -> String {
         var timeString = ""
-        timeString += String(format: "0%2d", hours)
+        timeString += String(format: "%02d", hours)
         timeString += " : "
-        timeString += String(format: "0%2d", minutes)
+        timeString += String(format: "%02d", minutes)
         timeString += " : "
-        timeString += String(format: "0%2d", seconds)
+        timeString += String(format: "%02d", seconds)
         return timeString
     }
-    
+
     func repeatAutosort(){
-        timeauto = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(autosort) , userInfo: nil, repeats: true)
+        timeauto = Timer.scheduledTimer(timeInterval: 0, target: self, selector: #selector(autosort) , userInfo: nil, repeats: true)
     }
     
     @objc func autosort(){
         count += 1
-        if count >= 50{
+        if count >= 600 {
             timeauto.invalidate()
         }
         
@@ -110,7 +92,7 @@ class GameVC: UIViewController {
             let image = imageViewsTam[random]
             let x: CGFloat = image.frame.origin.x
             let y: CGFloat = image.frame.origin.y
-        //    let image = imageViewsTam[random]
+            // let image = imageViewsTam[random]
             if checkMove(pos: CGPoint(x: x - move, y: y)){
                 UIView.animate(withDuration: 0.2) {
                     image.frame.origin.x -= move
@@ -154,7 +136,7 @@ class GameVC: UIViewController {
     func createPuzzle(){
         var count:Int = 0
         
-        let image = UIImage(named: "Image-1")!.resizeImage(imagesize: self.view.frame.width, row: CGFloat(row), col: CGFloat(col))
+        let image = UIImage(named: "animal-1")!.resizeImage(imagesize: self.view.frame.width, row: CGFloat(row), col: CGFloat(col))
         width = image.size.width
         height = image.size.height
         let y = self.view.frame.height/2 - height/2
@@ -184,8 +166,11 @@ class GameVC: UIViewController {
     }
     
     @objc func tapimage(gesture: UITapGestureRecognizer){
+        if !timerCounting {
+            return
+        }
         let image = gesture.view as! UIImageView
-        
+    
         let x = image.frame.origin.x
         let y = image.frame.origin.y
         let move = width/CGFloat(col)
@@ -239,7 +224,7 @@ class GameVC: UIViewController {
     
     func checkOut(pos:CGPoint) -> Bool{
         let top: CGFloat = self.view.frame.height/2 - height/2 - 1
-        //let top:CGFloat =   200.0
+        // let top:CGFloat =   200.0
         let left:CGFloat = -1
         let right:CGFloat = width - width/CGFloat(col) + 1
         let bottom:CGFloat = self.view.frame.height/2 + height/2 - width/CGFloat(col) + 1
@@ -262,5 +247,7 @@ extension UIImage{
         return newImage!
     }
 }
+
+
 
 
