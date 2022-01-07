@@ -26,7 +26,7 @@ class ChoosePhoto: UIViewController , UICollectionViewDataSource, UICollectionVi
     
     let artGallery = [UIImage(named: "art-1")! ,UIImage(named: "art-2")! ,UIImage(named: "art-3")! ,UIImage(named: "art-4")! ,UIImage(named: "art-5")! ,UIImage(named: "art-6")!]
     
-    let carsGallery = [UIImage(named: "car-1")! ,UIImage(named: "car-2")! ,UIImage(named: "car-3")! ,UIImage(named: "car-4")! ,UIImage(named: "car-5")! ,UIImage(named: "car-6")! ,UIImage(named: "car-7")! ,UIImage(named: "car-8")! ,UIImage(named: "car-9")! ,UIImage(named: "car-10")!]
+    let carsGallery = [UIImage(named: "car-1")! ,UIImage(named: "car-2")! ,UIImage(named: "car-3")! ,UIImage(named: "car-4")! ,UIImage(named: "car-5")! ,UIImage(named: "car-6")! ,UIImage(named: "car-7")! ,UIImage(named: "car-8")! ,UIImage(named: "car-9")!]
     
     let fruitsGallery = [UIImage(named: "fruits-1")! ,UIImage(named: "fruits-2")! ,UIImage(named: "fruits-3")! ,UIImage(named: "fruits-4")! ,UIImage(named: "fruits-5")! ,UIImage(named: "fruits-6")! ,UIImage(named: "fruits-7")! ,UIImage(named: "fruits-8")! ,UIImage(named: "fruits-9")! ,UIImage(named: "fruits-10")! ,UIImage(named: "fruits-11")!]
    
@@ -38,12 +38,12 @@ class ChoosePhoto: UIViewController , UICollectionViewDataSource, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animalCollectionView.delegate = self
-        animalCollectionView.dataSource = self
+//        animalCollectionView.delegate = self
+//        animalCollectionView.dataSource = self
 
-//        artCollectionView.delegate = self
-//        artCollectionView.dataSource = self
-//
+        artCollectionView.delegate = self
+        artCollectionView.dataSource = self
+
 //        carsCollectionView.delegate = self
 //        carsCollectionView.dataSource = self
 //
@@ -54,16 +54,19 @@ class ChoosePhoto: UIViewController , UICollectionViewDataSource, UICollectionVi
     }
  
     
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return animalsGallery.count
+        return artGallery.count
 
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "animalPhotoCell" , for: indexPath ) as? CollectionViewCell else { return
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "artPhotoCell" , for: indexPath ) as? CollectionViewCell else { return
             UICollectionViewCell( ) }
-       cell.animalPhoto.image = animalsGallery[indexPath.row]
+       cell.artPhoto.image = artGallery[indexPath.row]
         return cell
         
     }

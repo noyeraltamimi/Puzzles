@@ -12,14 +12,16 @@ import PhotosUI
 
 
 class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPickerViewControllerDelegate {
-
+    
+    
+    
+    
     var selectedImage : UIImage!
     var filledName : String = ""
-    
     var players : [Player] = []
-
+    
     let persistentContainer : NSPersistentContainer = {
-       
+        
         let container = NSPersistentContainer(name: "Puzzles")
         container.loadPersistentStores(completionHandler: { desc, error in
             if let error = error {
@@ -30,19 +32,26 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
         
         return container
     }()
-
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        fetchMyContacts()
         tableView.reloadData()
-        //viewImage.image = setSelectImage
+        fetchMyContacts()
+       
         
+    }
+    
+    
+    @IBAction func editButton(_ sender: Any) {
         
-}
+        if tableView.isEditing {
+            tableView.isEditing = false
+        } else {
+            tableView.isEditing = true
+        }
+    }
     
     
     func fetchMyContacts() {
@@ -65,81 +74,82 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
             let newPlayer = Player(context: context)
             newPlayer.name = name
             newPlayer.pic = pic
-        }
-        
-        do {
-         try context.save()
-        }
-        catch {
-            print(error)
+            do {
+                try context.save()
+            } catch {
+                print(error)
+            }
         }
     }
     
-
+    
     @IBAction func AddButton(_ sender: Any) {
-    
-        
-            let alert = UIAlertController(title: "Add Player", message: "", preferredStyle: .alert)
-                
-    
-        
-        let openPic = UIAlertAction(title: "add Image", style: .default , handler: { action in
+        let alert = UIAlertController(title: "Add Player", message: "", preferredStyle: .alert)
+        let openPic = UIAlertAction(title: "add Image", style: .default) { action in
             if let nameFromTextField = alert.textFields?[0].text {
                 self.filledName = nameFromTextField
             }
-            
+    
             self.tableView.reloadData()
-            
             self.presentPhotoPicker()
-        })
+        }
         
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addTextField { textFiledSet in
+            textFiledSet.placeholder = "Player Name.."
             
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alert.addTextField { textFiledSet in
-                textFiledSet.placeholder = "Player Name.."
-                
-            }
+        }
         
         alert.addAction(openPic)
-            alert.addAction(cancel)
-            
-            present(alert, animated: true, completion: nil)
-            
-        }
+        alert.addAction(cancel)
         
-
-        override func numberOfSections(in tableView: UITableView) -> Int {
-           
-            return 1
-            
-        }
+        present(alert, animated: true, completion: nil)
         
+    }
     
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         
-            return players.count
-        }
-        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellUsers", for: indexPath)
-            cell.textLabel?.text = players[indexPath.row].name
-            cell.imageView?.image = UIImage(data: players[indexPath.row].pic!)
-
-            return cell
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
         
-        }
+        return 1
+        
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return players.count
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellUsers", for: indexPath)
+        cell.textLabel?.text = players[indexPath.row].name
+        cell.imageView?.image = UIImage(data: players[indexPath.row].pic!)
+        
+        return cell
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle , forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            players.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+         //   self.defalutsNams.set(self.items, forKey: "items")
+            }
+    }
+    
     func presentImagePicker() {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .camera
         imagePicker.delegate = self
         present(imagePicker, animated: true, completion: nil)
     }
-
+    
     func presentPhotoPicker() {
         var configuration = PHPickerConfiguration()
         configuration.selectionLimit = 1
         configuration.filter = .images
-
+        
         let photoPicker = PHPickerViewController(configuration: configuration)
         photoPicker.delegate = self
         present(photoPicker, animated: true, completion: nil)
@@ -147,17 +157,14 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
     
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true, completion: nil)
-
+        
         if let result = results.first, result.itemProvider.canLoadObject(ofClass: UIImage.self) {
             result.itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
                 if let image = image as? UIImage {
-              
                     self.selectedImage = image
-                    
                     DispatchQueue.main.async {
-                       
                         self.setNewPlayer()
-                        //self.myImageView.image = image
+                        
                     }
                 }
             }
@@ -175,22 +182,41 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
     
     
     func imagePickerController(_ picker: UIImagePickerController,
-            didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        
         
         dismiss(animated: true, completion: nil)
-
+        
         
         let image = info[.originalImage] as! UIImage
         self.selectedImage = image
         self.setNewPlayer()
-      //  myImageView.image = image
-
         
-     //   imgStore.setImage(image, forKey: myFavImage)
-
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "moveToPhotos" , sender: nil)
+    }
     
 }
-     
+
+
+
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let HomeVC = segue.destination as! PhotosGallery
+//        }
+
+
+
+
+//    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//        if sourceIndexPath == destinationIndexPath {
+//            return
+//        } else {
+//            let movedItem = players[sourceIndexPath.row]
+//            players.remove(at: sourceIndexPath.row)
+//            players.insert(movedItem, at: destinationIndexPath.row)
+//        }
+//    }
+
