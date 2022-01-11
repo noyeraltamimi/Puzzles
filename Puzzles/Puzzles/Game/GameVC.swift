@@ -12,8 +12,8 @@ import SpriteKit
 class GameVC: UIViewController {
    
     // for game
-    var row:Int = 4
-    var col:Int = 4
+    var row:Int = 2
+    var col:Int = 2
     var count:Int = 0
     var timeauto:Timer!
     var width:CGFloat!
@@ -25,6 +25,8 @@ class GameVC: UIViewController {
     var timer:Timer = Timer()
     var countTime:Int = 0
     var timerCounting:Bool = false
+    
+    var correctOrder : [CGPoint] = []
 
     
     
@@ -40,8 +42,57 @@ class GameVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         createPuzzle()
+        
+        getCorrectOrder()
         repeatAutosort()
         startStopButton.setTitleColor(UIColor.green, for: .normal)
+        
+    }
+    
+    
+    func getCorrectOrder(){
+        
+        for nImage in imageViews {
+            correctOrder.append(nImage.frame.origin)
+        }
+        
+        //print(correctOrder)
+        
+    }
+    
+    func checkIfCorrect(){
+        var newOrder : [CGPoint] = []
+        
+        for nImage in imageViews {
+            newOrder.append(nImage.frame.origin)
+        }
+        
+        for i in 0...newOrder.count - 1 {
+            if !(newOrder[i].x == correctOrder[i].x && newOrder[i].y == correctOrder[i].y) {
+                print("wrong order")
+                return
+            }
+            
+        }
+        
+        print("corret!")
+        //to do
+        showCorrect()
+        
+        
+        
+//        print(correctOrder)
+//        print(newOrder)
+    }
+    
+    
+    
+    func showCorrect() {
+        timerCounting = false
+        timer.invalidate()
+    
+        
+        
         
     }
     
@@ -123,16 +174,16 @@ class GameVC: UIViewController {
             
             if checkMove(pos: CGPoint(x: x, y: y + move)){
                 UIView.animate(withDuration: 0.2) {
-                    image.frame.origin.x += move
+                    image.frame.origin.y += move
                 }
                 
                 return
                 
             }
             
-            if checkMove(pos: CGPoint(x: x, y: y + move)){
+            if checkMove(pos: CGPoint(x: x, y: y - move)){
                 UIView.animate(withDuration: 0.2) {
-                    image.frame.origin.x -= move
+                    image.frame.origin.y -= move
                 }
                 
                 return
@@ -186,19 +237,21 @@ class GameVC: UIViewController {
         let y = image.frame.origin.y
         let move = width/CGFloat(col)
         print(image.tag)
+        
         print(checkOut(pos: CGPoint(x: x, y: y - move)))
         
         if checkMove(pos: CGPoint(x: x - move, y: y)){
             UIView.animate(withDuration: 0.2) {
                 image.frame.origin.x -= move
             }
+            checkIfCorrect()
             return
         }
         if checkMove(pos: CGPoint(x: x + move, y: y)){
             UIView.animate(withDuration: 0.2) {
                 image.frame.origin.x += move
             }
-            
+            checkIfCorrect()
             return
         }
         
@@ -207,7 +260,7 @@ class GameVC: UIViewController {
             UIView.animate(withDuration: 0.2) {
                 image.frame.origin.y += move
             }
-            
+            checkIfCorrect()
             return
         }
         
@@ -216,7 +269,7 @@ class GameVC: UIViewController {
             UIView.animate(withDuration: 0.2) {
                 image.frame.origin.y -= move
             }
-            
+            checkIfCorrect()
             return
         }
         

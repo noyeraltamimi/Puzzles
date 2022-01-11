@@ -62,7 +62,9 @@ class PhotosGallery: UIViewController , UITableViewDelegate , UITableViewDataSou
         print("tapped")
         let cell = tableView.cellForRow(at: indexPath) as! SectionTableViewCell
         selectedImage = cell.selectedImage
-        performSegue(withIdentifier: "moveToGame", sender: nil)
+        if selectedImage != nil {
+            performSegue(withIdentifier: "moveToGame", sender: nil)
+        }
        // selectedImage = callGallery.theImage
 //        if let createPuzzle =
 //        = arrInfo.[indexPath].theImage
