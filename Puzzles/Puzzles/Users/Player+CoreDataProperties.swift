@@ -18,6 +18,7 @@ extension Player {
 
     @NSManaged public var name: String?
     @NSManaged public var pic: Data?
+    @NSManaged public var time: String?
 
 }
 

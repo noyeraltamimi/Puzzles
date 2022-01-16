@@ -1,0 +1,57 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "5fK-fW-egw"; */
+"5fK-fW-egw.text" = "Title";
+
+/* Class = "UITextField"; text = "Your Password ..."; ObjectID = "5kI-QY-FoR"; */
+"5kI-QY-FoR.text" = "كلمة المرور...";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6KS-0N-prW"; */
+"6KS-0N-prW.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "00:00:00"; ObjectID = "GQf-Le-638"; */
+"GQf-Le-638.text" = "00:00:00";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "IT7-or-adV"; */
+"IT7-or-adV.configuration.title" = "دخول";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IT7-or-adV"; */
+"IT7-or-adV.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Visitor?"; ObjectID = "MYo-7G-L5X"; */
+"MYo-7G-L5X.configuration.title" = "زائر؟";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "MYo-7G-L5X"; */
+"MYo-7G-L5X.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "ok"; ObjectID = "Mcj-mF-CmG"; */
+"Mcj-mF-CmG.configuration.title" = "تم";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Mcj-mF-CmG"; */
+"Mcj-mF-CmG.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "ODt-zM-htc"; */
+"ODt-zM-htc.title" = "تعديل";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "OEH-8Z-Eq4"; */
+"OEH-8Z-Eq4.text" = "Label";
+
+/* Class = "UITextField"; text = "Your Email ..."; ObjectID = "RQE-qB-oFX"; */
+"RQE-qB-oFX.text" = "البريد الالكتروني...";
+
+/* Class = "UIButton"; configuration.title = "Press to Start the game"; ObjectID = "VVG-fb-yFF"; */
+"VVG-fb-yFF.configuration.title" = "اضغط لبدء اللعبة";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VVG-fb-yFF"; */
+"VVG-fb-yFF.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "a4B-Qc-Zbd"; */
+"a4B-Qc-Zbd.text" = "0";
+
+/* Class = "UINavigationItem"; title = "Players Name"; ObjectID = "eqy-4y-jYa"; */
+"eqy-4y-jYa.title" = "أسماء اللاعبين";
+
+/* Class = "UIButton"; configuration.title = "Edit"; ObjectID = "vXX-R1-QtW"; */
+"vXX-R1-QtW.configuration.title" = "تعديل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vXX-R1-QtW"; */
+"vXX-R1-QtW.normalTitle" = "Button";

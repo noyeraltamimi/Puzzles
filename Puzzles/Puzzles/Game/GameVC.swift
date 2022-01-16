@@ -6,14 +6,13 @@
 //
 
 import UIKit
-import SpriteKit
 
 
 class GameVC: UIViewController {
    
     // for game
-    var row:Int = 2
-    var col:Int = 2
+    var row:Int = 3
+    var col:Int = 3
     var count:Int = 0
     var timeauto:Timer!
     var width:CGFloat!
@@ -30,7 +29,6 @@ class GameVC: UIViewController {
 
     
     
-    @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var TimerLabel: UILabel!
     
@@ -42,7 +40,6 @@ class GameVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         createPuzzle()
-        
         getCorrectOrder()
         repeatAutosort()
         startStopButton.setTitleColor(UIColor.green, for: .normal)
@@ -56,7 +53,6 @@ class GameVC: UIViewController {
             correctOrder.append(nImage.frame.origin)
         }
         
-        //print(correctOrder)
         
     }
     
@@ -90,13 +86,12 @@ class GameVC: UIViewController {
     func showCorrect() {
         timerCounting = false
         timer.invalidate()
-    
         
+        performSegue(withIdentifier: "moveToResult", sender: nil)
+
         
         
     }
-    
-
     
 
     @IBAction func startStopTapped(_ sender: Any) {

@@ -11,15 +11,19 @@ import CoreData
 
 class ResultScreen: UIViewController , UISearchBarDelegate {
 
-    var result : Int = 0
+    var players : [Player] = []
+    
+    var name : String = ""
+    var time : Int = 0
 
+    
     @IBOutlet weak var scoreLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        scoreLabel.text = "Congratulations (name) , you are finish in (time) "
+       scoreLabel.text = "Congratulations \(name) , you are finish in \(time) "
         
 
 }

@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Puzzles
+
+  Created by noyer altamimi on 10/06/1443 AH.
+  
+*/
+
+"Add Player" = "اضافة لاعب";
+"Add Image" = "اضافة صورة";
+"Cancel" = "إلغاء";
+"Player Name.." = "اسم اللاعب...";
+"Animal" = "حيوانات";
+"Gumball" = "غامبول";
+"Art" = "فن";
+"Naruto" = "ناروتو";
+"Fruit" = "فواكه";

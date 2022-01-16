@@ -84,8 +84,8 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
     
     
     @IBAction func AddButton(_ sender: Any) {
-        let alert = UIAlertController(title: "Add Player", message: "", preferredStyle: .alert)
-        let openPic = UIAlertAction(title: "add Image", style: .default) { action in
+        let alert = UIAlertController(title: "Add Player".Localized, message: "", preferredStyle: .alert)
+        let openPic = UIAlertAction(title: "Add Image".Localized, style: .default) { action in
             if let nameFromTextField = alert.textFields?[0].text {
                 self.filledName = nameFromTextField
             }
@@ -95,9 +95,9 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
         }
         
         
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancel = UIAlertAction(title: "Cancel".Localized, style: .cancel, handler: nil)
         alert.addTextField { textFiledSet in
-            textFiledSet.placeholder = "Player Name.."
+            textFiledSet.placeholder = "Player Name..".Localized
             
         }
         
@@ -199,24 +199,3 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
     }
     
 }
-
-
-
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let HomeVC = segue.destination as! PhotosGallery
-//        }
-
-
-
-
-//    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-//        if sourceIndexPath == destinationIndexPath {
-//            return
-//        } else {
-//            let movedItem = players[sourceIndexPath.row]
-//            players.remove(at: sourceIndexPath.row)
-//            players.insert(movedItem, at: destinationIndexPath.row)
-//        }
-//    }
-
