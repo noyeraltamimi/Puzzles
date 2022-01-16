@@ -32,6 +32,7 @@
 		C2FE57FF27903CB8004DF011 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2FE580127903CB8004DF011 /* Localizable.strings */; };
 		C2FE580327903CF8004DF011 /* ArabicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE580227903CF8004DF011 /* ArabicVC.swift */; };
 		C2FE58052793F209004DF011 /* settingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE58042793F209004DF011 /* settingVC.swift */; };
+		C2FE5808279424ED004DF011 /* fort.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C2FE580727940D06004DF011 /* fort.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		C2FE580027903CB8004DF011 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C2FE580227903CF8004DF011 /* ArabicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArabicVC.swift; sourceTree = "<group>"; };
 		C2FE58042793F209004DF011 /* settingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingVC.swift; sourceTree = "<group>"; };
+		C2FE580727940D06004DF011 /* fort.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fort.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				C2FE57F92790369B004DF011 /* puzzleGIF.gif */,
 				C2FE580127903CB8004DF011 /* Localizable.strings */,
 				C2FE580227903CF8004DF011 /* ArabicVC.swift */,
+				C2FE580727940D06004DF011 /* fort.m4a */,
 			);
 			path = Puzzles;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				C2DB8850278704A40012BAC1 /* Main.storyboard in Resources */,
 				C2FE57FF27903CB8004DF011 /* Localizable.strings in Resources */,
+				C2FE5808279424ED004DF011 /* fort.m4a in Resources */,
 				C2F21DDD275E084D00805223 /* LaunchScreen.storyboard in Resources */,
 				C2FE57FA2790369B004DF011 /* puzzleGIF.gif in Resources */,
 				C2B1C8B2278EAD5D00B20FF9 /* GoogleService-Info.plist in Resources */,

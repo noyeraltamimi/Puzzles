@@ -6,13 +6,42 @@
 //
 
 import UIKit
+import AVFoundation
+import PhotosUI
 
-class settingVC: UIViewController {
 
+class settingVC: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate {
+
+
+    
+    var gameSound : AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
     }
     
 
+    
+    
+    @IBAction func clicked(_ sender: Any) {
+        let pathToSound = Bundle.main.path(forResource: "fort", ofType: "m4a")
+        let  url = URL(fileURLWithPath: pathToSound!)
+
+        
+        do
+        {
+            gameSound = try AVAudioPlayer(contentsOf: url)
+            gameSound!.play()
+        }
+    catch
+        {
+        print(error)
+    }
+    }
+    
+    
 }
+
+
