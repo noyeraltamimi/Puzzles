@@ -15,7 +15,7 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
     
     
     
-    
+    // For Add Image To User Name.
     var selectedImage : UIImage!
     var filledName : String = ""
     var players : [Player] = []
@@ -38,12 +38,13 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
+        //To Call Fonction That Fetch Users.
         fetchMyContacts()
        
         
     }
     
-    
+    // To Edit Users Inside Application.
     @IBAction func editButton(_ sender: Any) {
         
         if tableView.isEditing {
@@ -53,7 +54,7 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
         }
     }
     
-    
+    //Make a Fonction To Fetch Users.
     func fetchMyContacts() {
         
         let context = persistentContainer.viewContext
@@ -66,7 +67,7 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
         
     }
     
-    
+    //Make a Fonction To Create Users Inside Application.
     func createNewPlayer( name : String, pic : Data) {
         let context = persistentContainer.viewContext
         
@@ -74,6 +75,7 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
             let newPlayer = Player(context: context)
             newPlayer.name = name
             newPlayer.pic = pic
+            //Save User With Photo.
             do {
                 try context.save()
             } catch {
@@ -82,7 +84,7 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
         }
     }
     
-    
+    //To Show Alert After They Click The Add Button Also Add Photo in The Same Alert.  
     @IBAction func AddButton(_ sender: Any) {
         let alert = UIAlertController(title: "Add Player".Localized, message: "", preferredStyle: .alert)
         let openPic = UIAlertAction(title: "Add Image".Localized, style: .default) { action in
@@ -94,13 +96,13 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
             self.presentPhotoPicker()
         }
         
-        
+        //To Add Cancel In Alert.
         let cancel = UIAlertAction(title: "Cancel".Localized, style: .cancel, handler: nil)
         alert.addTextField { textFiledSet in
             textFiledSet.placeholder = "Player Name..".Localized
             
         }
-        
+
         alert.addAction(openPic)
         alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
@@ -133,8 +135,8 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
         if editingStyle == .delete {
             players.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
-         //   self.defalutsNams.set(self.items, forKey: "items")
-            }
+
+        }
     }
     
     func presentImagePicker() {
