@@ -22,12 +22,12 @@ class ViewController: UIViewController {
   
     @IBOutlet weak var background: UIImageView!
     
- //  let puzzleGIF.gif = UIImage.gifImageWithName("puzzleGIF")
+    let puzzleGIF = UIImage.gifImageWithName("puzzleGIF")
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  //  background.image = puzzleGIF
+    background.image = puzzleGIF
 
     }
         

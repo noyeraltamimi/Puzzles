@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C269044C2795462500FEAA60 /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269044B2795462500FEAA60 /* ResultScreen.swift */; };
+		C2AE4D6D279556760083B421 /* DarkPuzzleGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = C2AE4D6C279556760083B421 /* DarkPuzzleGif.gif */; };
 		C2B1C8A6278D9C3000B20FF9 /* PhotosGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1C8A5278D9C3000B20FF9 /* PhotosGallery.swift */; };
 		C2B1C8A8278D9C5700B20FF9 /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1C8A7278D9C5700B20FF9 /* SectionTableViewCell.swift */; };
 		C2B1C8AA278D9C7100B20FF9 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1C8A9278D9C7100B20FF9 /* ImageCollectionViewCell.swift */; };
@@ -16,8 +18,6 @@
 		C2B1C8B7278EB8DA00B20FF9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C2B1C8B6278EB8DA00B20FF9 /* FirebaseFirestore */; };
 		C2B1C8B9278EB8DA00B20FF9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C2B1C8B8278EB8DA00B20FF9 /* FirebaseStorage */; };
 		C2CD4D3A275F5B2C009FB2CA /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D39275F5B2C009FB2CA /* GameVC.swift */; };
-		C2CD4D5227676FD6009FB2CA /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D5127676FD6009FB2CA /* ResultScreen.swift */; };
-		C2CD4D5627686FD5009FB2CA /* leaderboardsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D5527686FD5009FB2CA /* leaderboardsScreen.swift */; };
 		C2CD4D59276874B2009FB2CA /* Player+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D57276874B2009FB2CA /* Player+CoreDataClass.swift */; };
 		C2CD4D5A276874B2009FB2CA /* Player+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D58276874B2009FB2CA /* Player+CoreDataProperties.swift */; };
 		C2DB8850278704A40012BAC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F21DD3275E084B00805223 /* Main.storyboard */; };
@@ -36,14 +36,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C269044B2795462500FEAA60 /* ResultScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
+		C2AE4D6C279556760083B421 /* DarkPuzzleGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = DarkPuzzleGif.gif; sourceTree = "<group>"; };
 		C2B1C8A5278D9C3000B20FF9 /* PhotosGallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosGallery.swift; sourceTree = "<group>"; };
 		C2B1C8A7278D9C5700B20FF9 /* SectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionTableViewCell.swift; path = ../../../../SectionTableViewCell.swift; sourceTree = "<group>"; };
 		C2B1C8A9278D9C7100B20FF9 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCollectionViewCell.swift; path = ../../../../ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		C2B1C8AF278D9CBC00B20FF9 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = ../../HomeVC.swift; sourceTree = "<group>"; };
 		C2B1C8B1278EAD5C00B20FF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2CD4D39275F5B2C009FB2CA /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
-		C2CD4D5127676FD6009FB2CA /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
-		C2CD4D5527686FD5009FB2CA /* leaderboardsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leaderboardsScreen.swift; sourceTree = "<group>"; };
 		C2CD4D57276874B2009FB2CA /* Player+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C2CD4D58276874B2009FB2CA /* Player+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C2F21DCA275E084B00805223 /* Puzzles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzles.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,14 +133,13 @@
 		C2F21DCC275E084B00805223 /* Puzzles */ = {
 			isa = PBXGroup;
 			children = (
+				C269044B2795462500FEAA60 /* ResultScreen.swift */,
 				C2B1C8AF278D9CBC00B20FF9 /* HomeVC.swift */,
 				C2CD4D4C276745A7009FB2CA /* Photos */,
 				C2CD4D38275F5ADB009FB2CA /* Game */,
 				C2F21DCF275E084B00805223 /* SceneDelegate.swift */,
 				C2F21DCD275E084B00805223 /* AppDelegate.swift */,
 				C2F21DD1275E084B00805223 /* ViewController.swift */,
-				C2CD4D5127676FD6009FB2CA /* ResultScreen.swift */,
-				C2CD4D5527686FD5009FB2CA /* leaderboardsScreen.swift */,
 				C2FE57F72790152C004DF011 /* FileForGif.swift */,
 				C2FE58042793F209004DF011 /* settingVC.swift */,
 				C2CD4D44276719B3009FB2CA /* Users */,
@@ -150,8 +149,9 @@
 				C2F21DDE275E084D00805223 /* Info.plist */,
 				C2F21DD6275E084B00805223 /* Puzzles.xcdatamodeld */,
 				C2B1C8B1278EAD5C00B20FF9 /* GoogleService-Info.plist */,
-				C2FE57F92790369B004DF011 /* puzzleGIF.gif */,
 				C2FE580127903CB8004DF011 /* Localizable.strings */,
+				C2FE57F92790369B004DF011 /* puzzleGIF.gif */,
+				C2AE4D6C279556760083B421 /* DarkPuzzleGif.gif */,
 				C2FE580227903CF8004DF011 /* ArabicVC.swift */,
 				C2FE580727940D06004DF011 /* fort.m4a */,
 			);
@@ -227,6 +227,7 @@
 			files = (
 				C2DB8850278704A40012BAC1 /* Main.storyboard in Resources */,
 				C2FE57FF27903CB8004DF011 /* Localizable.strings in Resources */,
+				C2AE4D6D279556760083B421 /* DarkPuzzleGif.gif in Resources */,
 				C2FE5808279424ED004DF011 /* fort.m4a in Resources */,
 				C2F21DDD275E084D00805223 /* LaunchScreen.storyboard in Resources */,
 				C2FE57FA2790369B004DF011 /* puzzleGIF.gif in Resources */,
@@ -243,13 +244,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2B1C8B0278D9CBC00B20FF9 /* HomeVC.swift in Sources */,
+				C269044C2795462500FEAA60 /* ResultScreen.swift in Sources */,
 				C2FE58052793F209004DF011 /* settingVC.swift in Sources */,
 				C2F21DD2275E084B00805223 /* ViewController.swift in Sources */,
 				C2B1C8A8278D9C5700B20FF9 /* SectionTableViewCell.swift in Sources */,
 				C2FE580327903CF8004DF011 /* ArabicVC.swift in Sources */,
 				C2F21DD8275E084B00805223 /* Puzzles.xcdatamodeld in Sources */,
 				C2FE57F82790152C004DF011 /* FileForGif.swift in Sources */,
-				C2CD4D5627686FD5009FB2CA /* leaderboardsScreen.swift in Sources */,
 				C2B1C8AA278D9C7100B20FF9 /* ImageCollectionViewCell.swift in Sources */,
 				C2F21DCE275E084B00805223 /* AppDelegate.swift in Sources */,
 				C2B1C8A6278D9C3000B20FF9 /* PhotosGallery.swift in Sources */,
@@ -257,7 +258,6 @@
 				C2F21DD0275E084B00805223 /* SceneDelegate.swift in Sources */,
 				C2CD4D5A276874B2009FB2CA /* Player+CoreDataProperties.swift in Sources */,
 				C2CD4D59276874B2009FB2CA /* Player+CoreDataClass.swift in Sources */,
-				C2CD4D5227676FD6009FB2CA /* ResultScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +418,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PZPZ2N5FZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Puzzles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -430,7 +431,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.noyerfasal.Puzzles;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noyeraltamimi.Puzzles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -445,6 +446,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PZPZ2N5FZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Puzzles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -457,7 +459,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.noyerfasal.Puzzles;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noyeraltamimi.Puzzles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

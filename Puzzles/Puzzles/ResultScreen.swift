@@ -22,8 +22,7 @@ class ResultScreen: UIViewController , UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       scoreLabel.text = "Congratulations \(name) , you are finish in \(time) "
+        scoreLabel.text = "Good Job you are Win".Localized
         
 
 }

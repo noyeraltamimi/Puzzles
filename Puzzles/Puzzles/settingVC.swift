@@ -10,6 +10,8 @@ import AVFoundation
 import PhotosUI
 
 
+
+// For Add Sound To App 
 class settingVC: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate {
 
 
@@ -21,27 +23,22 @@ class settingVC: UIViewController , UIImagePickerControllerDelegate , UINavigati
 
         
     }
+        
+        @IBAction func clicked(_ sender: Any) {
     
-
-    
-    
-    @IBAction func clicked(_ sender: Any) {
         let pathToSound = Bundle.main.path(forResource: "fort", ofType: "m4a")
         let  url = URL(fileURLWithPath: pathToSound!)
-
-        
+            
         do
         {
             gameSound = try AVAudioPlayer(contentsOf: url)
             gameSound!.play()
+            
         }
     catch
         {
         print(error)
     }
-    }
-    
-    
+ }
 }
-
 

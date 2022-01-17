@@ -16,7 +16,6 @@ class PhotosGallery: UIViewController , UITableViewDelegate , UITableViewDataSou
     
     
     var selectedImage: UIImage!
-    
     var arrInfo = [Gallery]()
     
     override func viewDidLoad() {

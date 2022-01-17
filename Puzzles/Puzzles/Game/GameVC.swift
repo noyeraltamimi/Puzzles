@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 
 class GameVC: UIViewController {
@@ -48,7 +49,6 @@ class GameVC: UIViewController {
     
     
     func getCorrectOrder(){
-        
         for nImage in imageViews {
             correctOrder.append(nImage.frame.origin)
         }
@@ -75,20 +75,17 @@ class GameVC: UIViewController {
         //to do
         showCorrect()
         
-        
-        
-//        print(correctOrder)
-//        print(newOrder)
-    }
+}
     
     
     
     func showCorrect() {
         timerCounting = false
         timer.invalidate()
-        
+//        let alert = UIAlertController(title: " Are You Finish ? ", message: nil, preferredStyle: .actionSheet)
+//        alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
+//        present(alert, animated: true, completion: nil)
         performSegue(withIdentifier: "moveToResult", sender: nil)
-
         
         
     }
@@ -129,11 +126,7 @@ class GameVC: UIViewController {
     }
     
     
-    
-    
-    
-    
-    func repeatAutosort(){
+        func repeatAutosort(){
         timeauto = Timer.scheduledTimer(timeInterval: 0.001 , target: self, selector: #selector(autosort) , userInfo: nil, repeats: true)
     }
     
@@ -205,7 +198,7 @@ class GameVC: UIViewController {
                 let cropImage = imageConvert!.cropping(to: CGRect(x: CGFloat(j)*sizeImage, y: CGFloat(i)*sizeImage, width: sizeImage, height: sizeImage))
                 let imageView = UIImageView(image: UIImage(cgImage: cropImage!))
                 imageView.layer.borderWidth = 0.6
-                imageView.layer.borderColor = UIColor.systemBlue.cgColor
+                imageView.layer.borderColor = UIColor.black.cgColor
                 imageView.frame.origin = CGPoint(x: CGFloat(j)*sizeImage, y: CGFloat(i)*sizeImage + y)
                 view.addSubview(imageView)
                 imageView.tag = count

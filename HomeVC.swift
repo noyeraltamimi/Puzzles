@@ -103,7 +103,6 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
         
         alert.addAction(openPic)
         alert.addAction(cancel)
-        
         present(alert, animated: true, completion: nil)
         
     }
