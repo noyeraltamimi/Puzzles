@@ -15,20 +15,24 @@ import PhotosUI
 class settingVC: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate {
 
 
+    @IBOutlet weak var soundImage: UIImageView!
+    let SoudGif = UIImage.gifImageWithName("SoudGif")
+    let DarkMoodSoudGif = UIImage.gifImageWithName("DarkMoodSoudGif")
     
     var gameSound : AVAudioPlayer?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        soundImage.image = SoudGif
 
-        
     }
-        
+    
+
         @IBAction func clicked(_ sender: Any) {
     
         let pathToSound = Bundle.main.path(forResource: "fort", ofType: "m4a")
         let  url = URL(fileURLWithPath: pathToSound!)
-            
         do
         {
             gameSound = try AVAudioPlayer(contentsOf: url)

@@ -21,7 +21,7 @@ class GameVC: UIViewController {
     var imageViews:[UIImageView] = []
     var showImage:[Gallery] = []
     var selctedimage : UIImage!
-    //for Timer
+    // for Timer
     var timer:Timer = Timer()
     var countTime:Int = 0
     var timerCounting:Bool = false
@@ -82,9 +82,6 @@ class GameVC: UIViewController {
     func showCorrect() {
         timerCounting = false
         timer.invalidate()
-//        let alert = UIAlertController(title: " Are You Finish ? ", message: nil, preferredStyle: .actionSheet)
-//        alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
-//        present(alert, animated: true, completion: nil)
         performSegue(withIdentifier: "moveToResult", sender: nil)
         
         

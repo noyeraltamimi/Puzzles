@@ -133,8 +133,8 @@ class HomeVC: UITableViewController , UIImagePickerControllerDelegate, UINavigat
         if editingStyle == .delete {
             players.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
-         //   self.defalutsNams.set(self.items, forKey: "items")
-            }
+
+        }
     }
     
     func presentImagePicker() {

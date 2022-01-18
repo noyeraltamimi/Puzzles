@@ -21,6 +21,8 @@
 		C2CD4D59276874B2009FB2CA /* Player+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D57276874B2009FB2CA /* Player+CoreDataClass.swift */; };
 		C2CD4D5A276874B2009FB2CA /* Player+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD4D58276874B2009FB2CA /* Player+CoreDataProperties.swift */; };
 		C2DB8850278704A40012BAC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F21DD3275E084B00805223 /* Main.storyboard */; };
+		C2E0A3532796E9CD00BF4AE5 /* DarkMoodSoudGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = C2080EB32795DADE00D98F55 /* DarkMoodSoudGif.gif */; };
+		C2E0A3542796E9CF00BF4AE5 /* SoudGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = C2080EB22795DA3000D98F55 /* SoudGif.gif */; };
 		C2F21DCE275E084B00805223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F21DCD275E084B00805223 /* AppDelegate.swift */; };
 		C2F21DD0275E084B00805223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F21DCF275E084B00805223 /* SceneDelegate.swift */; };
 		C2F21DD2275E084B00805223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F21DD1275E084B00805223 /* ViewController.swift */; };
@@ -36,12 +38,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2080EB22795DA3000D98F55 /* SoudGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = SoudGif.gif; path = ../../../../../../Downloads/SoudGif.gif; sourceTree = "<group>"; };
+		C2080EB32795DADE00D98F55 /* DarkMoodSoudGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = DarkMoodSoudGif.gif; sourceTree = "<group>"; };
 		C269044B2795462500FEAA60 /* ResultScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
 		C2AE4D6C279556760083B421 /* DarkPuzzleGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = DarkPuzzleGif.gif; sourceTree = "<group>"; };
 		C2B1C8A5278D9C3000B20FF9 /* PhotosGallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosGallery.swift; sourceTree = "<group>"; };
 		C2B1C8A7278D9C5700B20FF9 /* SectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionTableViewCell.swift; path = ../../../../SectionTableViewCell.swift; sourceTree = "<group>"; };
 		C2B1C8A9278D9C7100B20FF9 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCollectionViewCell.swift; path = ../../../../ImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		C2B1C8AF278D9CBC00B20FF9 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = ../../HomeVC.swift; sourceTree = "<group>"; };
+		C2B1C8AF278D9CBC00B20FF9 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C2B1C8B1278EAD5C00B20FF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2CD4D39275F5B2C009FB2CA /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		C2CD4D57276874B2009FB2CA /* Player+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -79,12 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2080EAF2795D9DB00D98F55 /* AppGif */ = {
+			isa = PBXGroup;
+			children = (
+				C2FE57F92790369B004DF011 /* puzzleGIF.gif */,
+				C2AE4D6C279556760083B421 /* DarkPuzzleGif.gif */,
+				C2080EB22795DA3000D98F55 /* SoudGif.gif */,
+				C2080EB32795DADE00D98F55 /* DarkMoodSoudGif.gif */,
+				C2FE57F72790152C004DF011 /* FileForGif.swift */,
+			);
+			path = AppGif;
+			sourceTree = "<group>";
+		};
 		C2739D74277C816F00F74AD5 /* ChoosePhoto */ = {
 			isa = PBXGroup;
 			children = (
 				C2B1C8A9278D9C7100B20FF9 /* ImageCollectionViewCell.swift */,
 				C2B1C8A7278D9C5700B20FF9 /* SectionTableViewCell.swift */,
-				C2B1C8A5278D9C3000B20FF9 /* PhotosGallery.swift */,
 			);
 			path = ChoosePhoto;
 			sourceTree = "<group>";
@@ -114,6 +129,26 @@
 			path = Photos;
 			sourceTree = "<group>";
 		};
+		C2E0A3512796B35A00BF4AE5 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C269044B2795462500FEAA60 /* ResultScreen.swift */,
+				C2FE58042793F209004DF011 /* settingVC.swift */,
+				C2B1C8AF278D9CBC00B20FF9 /* HomeVC.swift */,
+				C2F21DD1275E084B00805223 /* ViewController.swift */,
+				C2CD4D38275F5ADB009FB2CA /* Game */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		C2E0A3522796B42900BF4AE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2B1C8A5278D9C3000B20FF9 /* PhotosGallery.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C2F21DC1275E084B00805223 = {
 			isa = PBXGroup;
 			children = (
@@ -133,16 +168,13 @@
 		C2F21DCC275E084B00805223 /* Puzzles */ = {
 			isa = PBXGroup;
 			children = (
-				C269044B2795462500FEAA60 /* ResultScreen.swift */,
-				C2B1C8AF278D9CBC00B20FF9 /* HomeVC.swift */,
+				C2E0A3512796B35A00BF4AE5 /* controllers */,
+				C2080EAF2795D9DB00D98F55 /* AppGif */,
 				C2CD4D4C276745A7009FB2CA /* Photos */,
-				C2CD4D38275F5ADB009FB2CA /* Game */,
+				C2CD4D44276719B3009FB2CA /* Users */,
+				C2E0A3522796B42900BF4AE5 /* Model */,
 				C2F21DCF275E084B00805223 /* SceneDelegate.swift */,
 				C2F21DCD275E084B00805223 /* AppDelegate.swift */,
-				C2F21DD1275E084B00805223 /* ViewController.swift */,
-				C2FE57F72790152C004DF011 /* FileForGif.swift */,
-				C2FE58042793F209004DF011 /* settingVC.swift */,
-				C2CD4D44276719B3009FB2CA /* Users */,
 				C2F21DD3275E084B00805223 /* Main.storyboard */,
 				C2F21DD9275E084D00805223 /* Assets.xcassets */,
 				C2F21DDB275E084D00805223 /* LaunchScreen.storyboard */,
@@ -150,8 +182,6 @@
 				C2F21DD6275E084B00805223 /* Puzzles.xcdatamodeld */,
 				C2B1C8B1278EAD5C00B20FF9 /* GoogleService-Info.plist */,
 				C2FE580127903CB8004DF011 /* Localizable.strings */,
-				C2FE57F92790369B004DF011 /* puzzleGIF.gif */,
-				C2AE4D6C279556760083B421 /* DarkPuzzleGif.gif */,
 				C2FE580227903CF8004DF011 /* ArabicVC.swift */,
 				C2FE580727940D06004DF011 /* fort.m4a */,
 			);
@@ -229,7 +259,9 @@
 				C2FE57FF27903CB8004DF011 /* Localizable.strings in Resources */,
 				C2AE4D6D279556760083B421 /* DarkPuzzleGif.gif in Resources */,
 				C2FE5808279424ED004DF011 /* fort.m4a in Resources */,
+				C2E0A3542796E9CF00BF4AE5 /* SoudGif.gif in Resources */,
 				C2F21DDD275E084D00805223 /* LaunchScreen.storyboard in Resources */,
+				C2E0A3532796E9CD00BF4AE5 /* DarkMoodSoudGif.gif in Resources */,
 				C2FE57FA2790369B004DF011 /* puzzleGIF.gif in Resources */,
 				C2B1C8B2278EAD5D00B20FF9 /* GoogleService-Info.plist in Resources */,
 				C2F21DDA275E084D00805223 /* Assets.xcassets in Resources */,

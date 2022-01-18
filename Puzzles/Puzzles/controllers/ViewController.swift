@@ -23,15 +23,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var background: UIImageView!
     
     let puzzleGIF = UIImage.gifImageWithName("puzzleGIF")
-
+    let DarkPuzzleGif = UIImage.gifImageWithName("DarkPuzzleGif")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    background.image = puzzleGIF
+        background.image = puzzleGIF
 
     }
         
-        
+    
+    
     @IBAction func userlogin(_ sender: Any) {
    
 
